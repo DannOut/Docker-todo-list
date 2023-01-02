@@ -6,7 +6,6 @@ services:
       - todoback
     environment:
       - REACT_APP_API_HOST=todoback
-      - REACT_APP_API_PORT=3001
     restart: always
 
   todoback:
@@ -19,7 +18,6 @@ services:
     build: ./todo-app/tests
     environment:
       - FRONT_HOST=todofront
-      - FRONT_PORT=3000
     depends_on:
       - todofront
       - todoback
